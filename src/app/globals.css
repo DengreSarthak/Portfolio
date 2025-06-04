@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #4d4d4d;
+  --background: hsla(36, 66%, 58%, 0.979);
+  --neon-green: #39ff14;
+  --neon-pink: #ff00ff;
+  --neon-blue: #00ffff;
+}
+
+/* 1) your custom utilities */
+@layer utilities {
+  .pixel-shadow {
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* 2) any reusable components */
+@layer components {
+  .section-title {
+    @apply inline-block mb-8;
+  }
+
+  .section-title h2 {
+    @apply bg-gray-700 px-2 text-4xl md:text-5xl text-[#f5d7b2] pixel-shadow font-bold 
+    [text-shadow:_2px_2px_0_#DAA520,_4px_4px_0_#CD853F,_6px_6px_0_rgba(0,0,0,0.3)]
+    transform hover:translate-y-[-2px] transition-transform duration-200;
+  }
+
+  .project-title {
+    @apply inline-block bg-gray-600 text-[#f5d7b2] px-4 py-2 text-2xl font-bold mb-1;
+  }
+  .tech-tag {
+    @apply inline-block border-2 border-dashed border-gray-800 px-3 py-1 text-sm pixel-shadow;
+    margin: 0.25rem;
+  }
+}
+
+/* 3) global element resets + site-wide “futuristic” look */
+@layer base {
+  html {
+    font-family: "VT323", monospace;
+    font-size: 18px; /* Base font size increase */
+  }
+
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)];
+    font-family: "VT323", monospace;
+    letter-spacing: 0.5px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-orbitron font-bold tracking-wide;
+  }
+
+  .futuristic-text {
+    @apply font-orbitron tracking-wider uppercase;
+  }
+
+  .pixel-shadow {
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Ensure neon text effect works */
+  .neon-text {
+    @apply font-orbitron;
+    color: var(--neon-blue);
+    text-shadow: 0 0 4px var(--neon-blue), 0 0 10px var(--neon-blue),
+      0 0 20px var(--neon-pink), 0 0 30px var(--neon-pink);
+  }
+
+  p,
+  li,
+  span {
+    @apply font-vt323;
+  }
+
+  /* neon-glow + glitch on every <code> / <pre> */
+  code,
+  pre {
+    font-family: "Orbitron", monospace;
+    color: var(--neon-blue);
+    text-shadow: 0 0 4px var(--neon-blue), 0 0 10px var(--neon-blue),
+      0 0 20px var(--neon-pink), 0 0 30px var(--neon-pink);
+    animation: glitch 2s infinite ease-in-out;
+  }
+
+  @keyframes glitch {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    20% {
+      opacity: 0.8;
+      transform: translate(-1px, 1px);
+    }
+    40% {
+      opacity: 1;
+      transform: translate(1px, -1px);
+    }
+    60% {
+      opacity: 0.9;
+      transform: translate(-1px, -1px);
+    }
+    80% {
+      opacity: 1;
+      transform: translate(1px, 1px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}
