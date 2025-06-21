@@ -7,14 +7,14 @@ const experiences = [
     title: "StabilityNexus",
     year: "2024 - Present",
     description:
-      "Stability Nexus is an open-source organization focused on building impactful dApps that solve real-world problems and empower users. I’ve contributed to two major projects and continue to support others within the ecosystem. I worked closely with the co-founder of Stability Nexus, mentoring contributors and helping submit 11 projects to the ETC Grant DAO—securing over \$77,000 in funding.",
+      "Stability Nexus is an open-source organization focused on building impactful dApps that solve real-world problems and empower users. I've contributed to two major projects and continue to support others within the ecosystem. I worked closely with the co-founder of Stability Nexus, mentoring contributors and helping submit 11 projects to the ETC Grant DAO—securing over \$77,000 in funding.",
     technologies: ["Contributor", "Mentorship"],
   },
 ];
 
 export function Experience() {
   return (
-    <section id="experience" className="py-8">
+    <section id="experience" className="py-4 sm:py-6 md:py-8">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -24,7 +24,7 @@ export function Experience() {
           <h2>Experience</h2>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -32,25 +32,23 @@ export function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-4 border-4 border-dashed border-gray-500 rounded-lg hover:border-gray-800 transition-colors duration-300 bg-[#f5d7b2]/50 backdrop-blur-sm"
+              className="p-3 sm:p-4 border-2 sm:border-4 border-dashed border-gray-500 rounded-lg hover:border-gray-800 transition-colors duration-300 bg-[#f5d7b2]/50 backdrop-blur-sm"
             >
               <div className="text-center">
-                <div className="inline-block bg-gray-600 text-[#f5d7b2] px-4 py-2 text-2xl font-bold pixel-shadow shadow-md mb-1">
+                <div className="inline-block bg-gray-600 text-[#f5d7b2] px-2 sm:px-4 py-1 sm:py-2 text-base sm:text-lg md:text-xl lg:text-2xl font-bold pixel-shadow shadow-md mb-1">
                   {exp.title}
                 </div>
-                <div className="mb-2 text-xl font-bold">{exp.year}</div>
+                <div className="mb-2 text-sm sm:text-base md:text-lg lg:text-xl font-bold">{exp.year}</div>
               </div>
-              <div className="text-center mb-4">
+              <div className="text-center mb-3 sm:mb-4">
                 {exp.technologies.map((tech, i) => (
-                  <span key={i} className="tech-tag">
+                  <span key={i} className="tech-tag text-xs sm:text-sm px-2 sm:px-3 py-1 m-1">
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="max-w-xl mx-auto">
-                {" "}
-                {/* Added wrapper div */}
-                <p className="text-xl fold-medium text-left">
+              <div className="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl mx-auto">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-left leading-relaxed">
                   {exp.description}
                 </p>
               </div>

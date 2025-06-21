@@ -40,50 +40,48 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-8">
+    <section id="contact" className="py-4 sm:py-6 md:py-8">
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
 
-        <div className="border border-dashed border-gray-700 p-4 max-w-md mx-auto">
-          <h3 className="text-xl font-bold mb-4 pixel-shadow">Connect With Me</h3>
-          <div className="space-y-4 text-lg">
+        <div className="border border-dashed border-gray-700 p-3 sm:p-4 md:p-6 max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+          <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 sm:mb-4 pixel-shadow">Connect With Me</h3>
+          <div className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
             <div>
-              <h4 className="font-bold">Email</h4>
-              <p>dengresarthak2002@gmail.com</p>
+              <h4 className="font-bold mb-1">Email</h4>
+              <p className="break-words">dengresarthak2002@gmail.com</p>
             </div>
             <div>
-              <h4 className="font-bold">Based in</h4>
+              <h4 className="font-bold mb-1">Based in</h4>
               <p>LNMIIT, Jaipur, India</p>
             </div>
             <div>
-              <h4 className="font-bold">Social</h4>
-              <p>
+              <h4 className="font-bold mb-1">Social</h4>
+              <div className="flex flex-col sm:flex-row sm:flex-wrap gap-1 sm:gap-2">
                 <a
                   href="https://github.com/DengreSarthak"
-                  className="underline"
+                  className="underline hover:text-gray-900 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   GitHub
-                </a>{" "}
-                /{" "}
+                </a>
                 <a
                   href="https://linkedin.com/in/sarthak-dengre"
-                  className="underline"
+                  className="underline hover:text-gray-900 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   LinkedIn
-                </a>{" "}
-                /{" "}
+                </a>
                 <a
                   href="https://twitter.com/sarthak_dengre"
-                  className="underline"
+                  className="underline hover:text-gray-900 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Twitter
                 </a>
-              </p>
+              </div>
             </div>
           </div>
         </div>

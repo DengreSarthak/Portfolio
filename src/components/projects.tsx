@@ -40,7 +40,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="projects" className="py-8">
+    <section id="projects" className="py-4 sm:py-6 md:py-8">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -50,13 +50,13 @@ export function Projects() {
           <h2>Projects</h2>
         </div>
 
-        <p className="mb-8 text-xl">
+        <p className="mb-6 sm:mb-8 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl mx-auto opacity-80">
           This represents just a small selection of the projects I have worked
           on in the Web3 space. I have many more pieces of personal, university
           and blockchain work.
         </p>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -66,18 +66,22 @@ export function Projects() {
               transition={{ delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="project-title mb-1">{project.title}</div>
-              <div className="mb-2 text-xl font-bold">{project.year}</div>
+              <div className="text-center mb-4">
+                <div className="inline-block bg-gray-700 text-[#f5d7b2] px-3 sm:px-4 py-2 text-lg sm:text-xl md:text-2xl font-bold pixel-shadow shadow-md mb-2 rounded">
+                  {project.title}
+                </div>
+                <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-600">{project.year}</div>
+              </div>
 
-              <div className="mb-4">
+              <div className="mb-4 flex flex-wrap justify-center gap-2">
                 {project.technologies.map((tech, i) => (
-                  <span key={i} className="tech-tag">
+                  <span key={i} className="bg-gray-600/20 border border-gray-600/40 px-3 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-600/30 transition-colors">
                     {tech}
                   </span>
                 ))}
               </div>
 
-              <p className="text-xl font-medium max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg font-medium max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl mx-auto leading-relaxed text-gray-700 text-center">
                 {project.description}
               </p>
             </motion.div>
