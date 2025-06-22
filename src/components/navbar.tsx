@@ -33,6 +33,7 @@ const navigationItems = [
   { name: "Achievements", href: "#achievements" },
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
+  { name: "Bootcamps", href: "#bootcamps" },
   { name: "Contact", href: "#contact" },
 ];
 
