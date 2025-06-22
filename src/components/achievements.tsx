@@ -7,31 +7,31 @@ const achievements = [
     title: "Encode's University Hackathon",
     year: "2025",
     description:
-      "Won 1st place in Encode's University Hackathon: Future of Blockchain under Citrea. Our project revolutionizes crowdfunding by introducing smart rules and issuing Proof-of-Funding-Tokens (PFT's) to contributors.",
-  },
-  {
-    title: "LNMHacks Hackathon",
-    year: "2025",
-    description:
-      "Secured 1st place in the Aptos track with a decentralized finance platform that helps users discover nearby hackathons and conferences.",
+      "Crushed the competition with a smart crowdfunding platform featuring Proof-of-Funding Tokens. Citrea track winner!",
   },
   {
     title: "ETC Grant DAO",
     year: "2025",
     description:
-      "Proposed an innovative concept-HackNexus to Stability Nexus for ETC Grant DAO, winning a $10,500 grant to develop a solution that enhances the Ethereum Classic ecosystem.",
+      "Scored $10,500 for HackNexus — because great ideas deserve great funding! Boosting the Ethereum Classic ecosystem.",
   },
   {
     title: "EthGlobal Taipei",
     year: "2025",
     description:
-      "Secured awards in the World Track at EthGlobal Taipei with a system for partial ownership using Real World Assets (RWA) tokenization.",
+      "World Track prize with RWA tokenization magic. Making real-world assets accessible to everyone, one token at a time!",
   },
   {
     title: "EthGlobal Agentic Ethereum",
     year: "2025",
     description:
-      "Won awards in the Coinbase Track for developing an automated trading system powered by AI agents that trade on behalf of users.",
+      "Coinbase track prize pool! Created AI trading agents that work while you sleep. The future of autonomous DeFi is here.",
+  },
+  {
+    title: "LNMHacks Hackathon",
+    year: "2025",
+    description:
+      "Aptos track champion! Built the ultimate Web3 event discovery platform connecting builders worldwide.",
   },
 ];
 

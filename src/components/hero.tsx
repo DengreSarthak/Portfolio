@@ -17,20 +17,19 @@ export function Hero() {
             sm:[text-shadow:_2px_2px_0_#DAA520,_4px_4px_0_#CD853F,_6px_6px_0_rgba(0,0,0,0.3)]
             transform hover:translate-y-[-2px] transition-transform duration-200"
           >
-            Hi there
+            Hey there
           </h1>
         </div>
 
         <div className="space-y-4 sm:space-y-6 font-medium text-base sm:text-lg md:text-xl lg:text-2xl max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl mx-auto">
           <p className="leading-relaxed">
-            Hi, I'm Sarthak Dengre — a 3rd-year student at LNMIIT, India, with a
-            deep passion for all things decentralized to smart contracts, from
-            RWA to Ai-Agents and dApps.
+            I'm <span className="font-bold text-gray-800">Sarthak</span> — a Web3 builder obsessed with 
+            smart contracts, AI agents, and RWAs. Currently studying about State Channels and TEE turning blockchain dreams into reality!
           </p>
 
           <p className="leading-relaxed">
-            In addition to my love of blockchain and Web3, I am also interested
-            in education, history, economics, politics and obviously memes.
+            When not coding decentralized magic, I'm probably reading about economics, 
+            debating politics, or hunting for the perfect meme. Life's too short for boring tech!
           </p>
         </div>
       </motion.div>

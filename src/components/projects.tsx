@@ -1,44 +1,58 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useState } from "react"
+import { Github, ChevronDown, ChevronUp, ExternalLink } from "lucide-react"
 
 const projects = [
   {
+    title: "Yellow Trade",
+    year: "2025",
+    shortDescription: "A sophisticated decentralized trading platform designed for perpetual futures contracts. Built with cutting-edge technology to eliminate slippage completely while offering traders customizable leverage options.",
+    fullDescription:
+      "A sophisticated decentralized trading platform designed for perpetual futures contracts. Built with cutting-edge technology to eliminate slippage completely while offering traders customizable leverage options. The platform operates off-chain for lightning-fast execution while maintaining on-chain security and transparency, providing traders with zero counterparty risk and institutional-grade trading experience.",
+  },
+  {
     title: "HackNexus",
     year: "2025",
-    description:
-      "HackNexus helps participants easily find local hackathons, conferences, and meetups tailored to their interests, while organizers can seamlessly host and manage events. With on-chain Proof-of-Attendance tokens, every experience becomes a verifiable badge of participation in the Web3 builder ecosystem.",
-    technologies: [
-      "Mapbox",
-      "Solidity",
-      "Next.js",
-      "IPFS",
-    ],
+    shortDescription: "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels.",
+    fullDescription:
+      "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels. Event organizers benefit from seamless hosting and management tools, while attendees earn verifiable on-chain Proof-of-Attendance tokens that serve as permanent badges of participation in the Web3 builder ecosystem.",
+    githubLink: "https://github.com/StabilityNexus/HackNexus",
   },
   {
     title: "Clowder",
     year: "2025",
-    description:
-      "Clowder lets project owners create Contribution Accounting Tokens (CATs) to track and reward individual contributions. It brings transparency and accountability to collaboration by turning every effort into measurable, on-chain recognition.",
-    technologies: [
-      "Solidity",
-      "Next.js",
-    ],
+    shortDescription: "An innovative collaboration platform that transforms how teams track and reward contributions through Contribution Accounting Tokens (CATs). Project owners can create transparent systems to monitor individual contributions, ensuring every team member's effort is properly recognized and rewarded.",
+    fullDescription:
+      "An innovative collaboration platform that transforms how teams track and reward contributions through Contribution Accounting Tokens (CATs). Project owners can create transparent systems to monitor individual contributions, ensuring every team member's effort is properly recognized and rewarded. The platform brings unprecedented transparency and accountability to collaborative work by converting every contribution into measurable, on-chain recognition that builds lasting professional reputation.",
+    githubLink: "https://github.com/StabilityNexus/Clowder", 
+    demoLink: "https://clowder.stability.nexus/",
   },
   {
     title: "Hodlcoin",
     year: "2024",
-    description:
-      "HodlCoin is a decentralized platform designed to reward long-term holders. Its unique incentive mechanism benefits users, vault creators, and the vault itself by encouraging users to lock their tokens and earn rewards over time—making it an ideal choice for those committed to holding and growing value.",
-    technologies: [
-      "Solidity",
-      "React",
-      "Web3.js",
-    ],
+    shortDescription: "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself.",
+    fullDescription:
+      "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself. Users are encouraged to lock their tokens for extended periods and earn substantial rewards over time, making it the ideal choice for committed investors who believe in the long-term value proposition of their holdings.",
+    githubLink: "https://github.com/StabilityNexus/hodlCoin-Solidity-WebUI",
+    demoLink: "https://evm.hodlcoin.co.in/", 
   },
 ];
 
 export function Projects() {
+  const [expandedProjects, setExpandedProjects] = useState<Set<number>>(new Set());
+
+  const toggleProject = (index: number) => {
+    const newExpanded = new Set(expandedProjects);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedProjects(newExpanded);
+  };
+
   return (
     <section id="projects" className="py-4 sm:py-6 md:py-8">
       <motion.div
@@ -51,9 +65,7 @@ export function Projects() {
         </div>
 
         <p className="mb-6 sm:mb-8 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl mx-auto opacity-80">
-          This represents just a small selection of the projects I have worked
-          on in the Web3 space. I have many more pieces of personal, university
-          and blockchain work.
+          A curated selection of my Web3 adventures. Each project solves real problems while pushing blockchain boundaries!
         </p>
 
         <div className="space-y-6 sm:space-y-8">
@@ -73,17 +85,55 @@ export function Projects() {
                 <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-600">{project.year}</div>
               </div>
 
-              <div className="mb-4 flex flex-wrap justify-center gap-2">
-                {project.technologies.map((tech, i) => (
-                  <span key={i} className="bg-gray-600/20 border border-gray-600/40 px-3 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-600/30 transition-colors">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <p className="text-sm sm:text-base md:text-lg font-medium max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl mx-auto leading-relaxed text-gray-700 text-center">
-                {project.description}
+              <p className="text-sm sm:text-base md:text-lg font-medium max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl mx-auto leading-relaxed text-gray-700 text-center mb-4">
+                {expandedProjects.has(index) ? project.fullDescription : project.shortDescription}
               </p>
+
+              <div className="flex flex-col items-center gap-3">
+                <button
+                  onClick={() => toggleProject(index)}
+                  className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium"
+                >
+                  {expandedProjects.has(index) ? (
+                    <>
+                      <ChevronUp size={16} />
+                      Show Less
+                    </>
+                  ) : (
+                    <>
+                      <ChevronDown size={16} />
+                      More
+                    </>
+                  )}
+                </button>
+                
+                {expandedProjects.has(index) && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex flex-col sm:flex-row gap-3"
+                  >
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-gray-700 hover:bg-gray-900 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium"
+                    >
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium"
+                    >
+                      <Github size={16} />
+                      View Code
+                    </a>
+                  </motion.div>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
