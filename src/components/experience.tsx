@@ -4,10 +4,18 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    title: "Google Summer of Code",
+    year: "2025 - Present",
+    description:
+      "Currently contributing to Raindrop under AOSSIE as part of Google Summer of Code. The project revolves around vault mechanics, yield calculations, and staking logic for ERC-20 tokens. Working on implementing sophisticated DeFi protocols that enable users to maximize their token yields through advanced staking mechanisms.",
+
+  },
+  {
     title: "StabilityNexus",
     year: "2024 - Present",
     description:
-      "Stability Nexus is an open-source organization focused on building impactful dApps that solve real-world problems and empower users. I've contributed to two major projects and continue to support others within the ecosystem. I worked closely with the co-founder of Stability Nexus, mentoring contributors and helping submit 11 projects to the ETC Grant DAO—securing over \$77,000 in funding.",
+      "Stability Nexus is an open-source organization focused on building impactful dApps that solve real-world problems and empower users. I've contributed to four major projects and continue to support others within the ecosystem. I worked closely with the co-founder of Stability Nexus, mentoring contributors and helping submit 11 projects to the ETC Grant DAO—securing over \$77,000 in funding.",
+
   },
 ];
 
@@ -40,7 +48,7 @@ export function Experience() {
                 <div className="mb-2 text-sm sm:text-base md:text-lg lg:text-xl font-bold">{exp.year}</div>
               </div>
               <div className="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl mx-auto">
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-left leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg font-medium text-left leading-relaxed">
                   {exp.description}
                 </p>
               </div>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useState } from "react"
-import { Github, ChevronDown, ChevronUp, ExternalLink } from "lucide-react"
+import { Github, ChevronDown, ChevronUp, ExternalLink, MoreHorizontal, Sparkles } from "lucide-react"
 
 const projects = [
   {
@@ -113,29 +113,64 @@ export function Projects() {
                     animate={{ opacity: 1, y: 0 }}
                     className="flex flex-col sm:flex-row gap-3"
                   >
-                    <a
-                      href={project.demoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-gray-700 hover:bg-gray-900 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium"
-                    >
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium"
-                    >
-                      <Github size={16} />
-                      View Code
-                    </a>
+                    {project.demoLink && (
+                      <a
+                        href={project.demoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 bg-gray-700 hover:bg-gray-900 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium"
+                      >
+                        <ExternalLink size={16} />
+                        Live Demo
+                      </a>
+                    )}
+                    {project.githubLink && (
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium"
+                      >
+                        <Github size={16} />
+                        View Code
+                      </a>
+                    )}
                   </motion.div>
                 )}
               </div>
             </motion.div>
           ))}
+
+          {/* And Many More Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="text-center"
+          >
+            <motion.div
+              className="relative inline-flex items-center gap-3 px-6 py-4 border-2 border-dashed border-gray-400 rounded-lg bg-gradient-to-r from-gray-50/50 to-gray-100/50 backdrop-blur-sm"
+              whileHover={{ scale: 1.02, borderColor: "#6b7280" }}
+              transition={{ duration: 0.2 }}
+            >
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              >
+                <Sparkles size={20} className="text-gray-600" />
+              </motion.div>
+              
+              <div className="flex items-center gap-2">
+                <MoreHorizontal size={24} className="text-gray-500" />
+                <span className="text-lg sm:text-xl font-medium text-gray-600 italic">
+                  And many more projects..
+                </span>
+                <MoreHorizontal size={24} className="text-gray-500" />
+              </div>
+
+            </motion.div>
+          </motion.div>
         </div>
       </motion.div>
     </section>

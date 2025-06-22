@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Achievements } from "@/components/achievements"
 import { Contact } from "@/components/contact"
 import { Experience } from "@/components/experience"
+import { Bootcamps } from "@/components/bootcamps"
 import { Projects } from "@/components/projects"
 import { Hero } from "@/components/hero"
 import { Navbar } from "@/components/navbar"
@@ -46,6 +47,8 @@ export default function Home() {
           <Projects />
           <Divider />
           <Experience />
+          <Divider />
+          <Bootcamps />
           <Divider />
           <Contact />
         </main>
