@@ -6,13 +6,6 @@ import { Github, ChevronDown, ChevronUp, ExternalLink, MoreHorizontal, Sparkles 
 
 const projects = [
   {
-    title: "Yellow Trade",
-    year: "2025",
-    shortDescription: "A sophisticated decentralized trading platform designed for perpetual futures contracts. Built with cutting-edge technology to eliminate slippage completely while offering traders customizable leverage options.",
-    fullDescription:
-      "A sophisticated decentralized trading platform designed for perpetual futures contracts. Built with cutting-edge technology to eliminate slippage completely while offering traders customizable leverage options. The platform operates off-chain for lightning-fast execution while maintaining on-chain security and transparency, providing traders with zero counterparty risk and institutional-grade trading experience.",
-  },
-  {
     title: "HackNexus",
     year: "2025",
     shortDescription: "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels.",
