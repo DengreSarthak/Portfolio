@@ -11,7 +11,7 @@ const projects = [
     shortDescription: "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels.",
     fullDescription:
       "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels. Event organizers benefit from seamless hosting and management tools, while attendees earn verifiable on-chain Proof-of-Attendance tokens that serve as permanent badges of participation in the Web3 builder ecosystem.",
-    githubLink: "https://github.com/StabilityNexus/HackNexus",
+    githubLink: "https://github.com/StabilityNexus/HackHub-Solidity",
   },
   {
     title: "Clowder",
