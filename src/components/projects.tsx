@@ -6,20 +6,13 @@ import { Github, ChevronDown, ChevronUp, ExternalLink, MoreHorizontal, Sparkles 
 
 const projects = [
   {
-    title: "HackNexus",
+    title: "HackHub",
     year: "2025",
     shortDescription: "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels.",
     fullDescription:
       "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels. Event organizers benefit from seamless hosting and management tools, while attendees earn verifiable on-chain Proof-of-Attendance tokens that serve as permanent badges of participation in the Web3 builder ecosystem.",
-    githubLink: "https://github.com/StabilityNexus/HackHub-Solidity",
-  },
-  {
-    title: "HackNexus",
-    year: "2025",
-    shortDescription: "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels.",
-    fullDescription:
-      "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels. Event organizers benefit from seamless hosting and management tools, while attendees earn verifiable on-chain Proof-of-Attendance tokens that serve as permanent badges of participation in the Web3 builder ecosystem.",
-    githubLink: "https://github.com/StabilityNexus/HackHub-Solidity",
+    githubLink: "https://github.com/StabilityNexus/HackHub-WebUI",
+    demoLink: "https://hackhub.stability.nexus/",
   },
   {
     title: "Clowder",
@@ -38,6 +31,41 @@ const projects = [
       "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself. Users are encouraged to lock their tokens for extended periods and earn substantial rewards over time, making it the ideal choice for committed investors who believe in the long-term value proposition of their holdings.",
     githubLink: "https://github.com/StabilityNexus/hodlCoin-Solidity-WebUI",
     demoLink: "https://evm.hodlcoin.co.in/", 
+  },
+  {
+    title: "Raindrop",
+    year: "2025",
+    shortDescription: "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself.",
+    fullDescription:
+      "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself. Users are encouraged to lock their tokens for extended periods and earn substantial rewards over time, making it the ideal choice for committed investors who believe in the long-term value proposition of their holdings.",
+    githubLink: "https://github.com/StabilityNexus/Raindrop-Frontend",
+    demoLink: "https://stabilitynexus.github.io/RainDrop-Frontend/", 
+  },
+  {
+    title: "TNT",
+    year: "2025",
+    shortDescription: "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself.",
+    fullDescription:
+      "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself. Users are encouraged to lock their tokens for extended periods and earn substantial rewards over time, making it the ideal choice for committed investors who believe in the long-term value proposition of their holdings.",
+    githubLink: "https://github.com/StabilityNexus/TNT",
+    demoLink: "https://tnt.stability.nexus/", 
+  },
+  {
+    title: "IncoRichi",
+    year: "2025",
+    shortDescription: "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself.",
+    fullDescription:
+      "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself. Users are encouraged to lock their tokens for extended periods and earn substantial rewards over time, making it the ideal choice for committed investors who believe in the long-term value proposition of their holdings.",
+    githubLink: "https://github.com/DengreSarthak/IncoRichi",
+    demoLink: "https://inco-richi.vercel.app/", 
+  },
+  {
+    title: "Revora",
+    year: "2025",
+    shortDescription: "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself.",
+    fullDescription:
+      "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself. Users are encouraged to lock their tokens for extended periods and earn substantial rewards over time, making it the ideal choice for committed investors who believe in the long-term value proposition of their holdings.",
+    githubLink: "https://github.com/DengreSarthak/World",
   },
 ];
 
@@ -80,8 +108,37 @@ export function Projects() {
               className="text-center"
             >
               <div className="text-center mb-4">
-                <div className="inline-block bg-gray-700 text-[#f5d7b2] px-3 sm:px-4 py-2 text-lg sm:text-xl md:text-2xl font-bold pixel-shadow shadow-md mb-2 rounded">
-                  {project.title}
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  {/* GitHub link on the left */}
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-8 h-8 bg-gray-700 hover:bg-gray-800 text-white rounded-full transition-colors duration-200"
+                      title="View Code"
+                    >
+                      <Github size={16} />
+                    </a>
+                  )}
+                  
+                  {/* Project title in the center */}
+                  <div className="inline-block bg-gray-700 text-[#f5d7b2] px-3 sm:px-4 py-2 text-lg sm:text-xl md:text-2xl font-bold pixel-shadow shadow-md rounded">
+                    {project.title}
+                  </div>
+                  
+                  {/* Live demo link on the right */}
+                  {project.demoLink && (
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-8 h-8 bg-gray-700 hover:bg-gray-900 text-white rounded-full transition-colors duration-200"
+                      title="Live Demo"
+                    >
+                      <ExternalLink size={16} />
+                    </a>
+                  )}
                 </div>
                 <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-600">{project.year}</div>
               </div>
@@ -108,36 +165,7 @@ export function Projects() {
                   )}
                 </button>
                 
-                {expandedProjects.has(index) && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="flex flex-col sm:flex-row gap-3"
-                  >
-                    {project.demoLink && (
-                      <a
-                        href={project.demoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-gray-700 hover:bg-gray-900 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium"
-                      >
-                        <ExternalLink size={16} />
-                        Live Demo
-                      </a>
-                    )}
-                    {project.githubLink && (
-                      <a
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium"
-                      >
-                        <Github size={16} />
-                        View Code
-                      </a>
-                    )}
-                  </motion.div>
-                )}
+
               </div>
             </motion.div>
           ))}

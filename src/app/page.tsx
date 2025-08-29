@@ -42,11 +42,11 @@ export default function Home() {
         <main className="w-full max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8 text-center">
           <Hero />
           <Divider />
+          <Experience />
+          <Divider />
           <Achievements />
           <Divider />
           <Projects />
-          <Divider />
-          <Experience />
           <Divider />
           <Bootcamps />
           <Divider />
