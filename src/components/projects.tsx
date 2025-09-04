@@ -33,15 +33,6 @@ const projects = [
     demoLink: "https://evm.hodlcoin.co.in/", 
   },
   {
-    title: "Raindrop",
-    year: "2025",
-    shortDescription: "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself.",
-    fullDescription:
-      "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself. Users are encouraged to lock their tokens for extended periods and earn substantial rewards over time, making it the ideal choice for committed investors who believe in the long-term value proposition of their holdings.",
-    githubLink: "https://github.com/StabilityNexus/Raindrop-Frontend",
-    demoLink: "https://stabilitynexus.github.io/RainDrop-Frontend/", 
-  },
-  {
     title: "TNT",
     year: "2025",
     shortDescription: "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself.",
