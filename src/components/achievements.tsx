@@ -71,17 +71,9 @@ export function Achievements() {
                 aria-hidden
                 className="absolute inset-y-4 left-0 w-[3px] rounded-full bg-[#b9934a]/70"
               />
-              <div className="relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-5">
-                  <div className="flex items-center gap-3 text-[#2a2420]">
-                    <div className="text-center">
-                      <h3 className="text-lg font-semibold text-[#2a2420] sm:text-xl text-center">
-                        {achievement.title}
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-lg font-semibold text-[#2a2420] sm:text-xl text-center">
+                {achievement.title}
+              </h3>
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-[#3b2f25] sm:text-base">
                 {achievement.description}
               </p>

@@ -1,19 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Compass } from "lucide-react";
 
 const bootcamps = [
   {
     title: "EigenLayer Bootcamp",
-    year: "2025",
+    year: "Cohort 2025",
     description:
-      "Selected as one of 30 elite developers and creators from 200+ amazing applications for the prestigious EigenLayer bootcamp program.",
+      "Selected from 200+ applicants to explore the EigenLayer restaking universe, designing resilient AVS patterns and championing shared security primitives.",
+    focus: "Restaking primitives & AVS ops",
   },
   {
     title: "Uniswap Hook Incubator",
-    year: "2025", 
+    year: "Cohort 2025",
     description:
-      "Accepted into the exclusive Uniswap Hook Incubator program to develop innovative DeFi solutions and custom trading mechanisms.",
+      "Joined the Uniswap Hook Incubator to prototype custom liquidity flows, programmable vault logic, and next-gen trading experiences for on-chain markets.",
+    focus: "Programmable liquidity design",
   },
 ];
 
@@ -24,37 +27,51 @@ export function Bootcamps() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
+        className="mx-auto max-w-5xl"
       >
-        <div className="section-title">
+        <div className="section-title text-center">
           <h2>Bootcamps</h2>
         </div>
 
-        <div className="space-y-4 sm:space-y-6">
+        <p className="mx-auto mb-6 max-w-2xl text-center text-sm sm:text-base md:text-lg text-[#4a3a2b] opacity-80">
+          Invitations to sharpen craft with the ecosystems I geek out about the most.
+        </p>
+
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-2">
           {bootcamps.map((bootcamp, index) => (
-            <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
+            <motion.article
+              key={bootcamp.title}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.08 }}
+              className="group relative overflow-hidden rounded-md border border-[#d7b97c]/55 bg-[#fdf3d2] px-5 py-6 shadow-[0_10px_28px_-24px_rgba(47,39,32,0.65)] transition-transform duration-200 hover:-translate-y-1.5"
             >
-              <div className="text-center mb-4">
-                <div className="inline-block bg-gray-700 text-[#FBE9BB] px-3 sm:px-4 py-2 text-base sm:text-lg md:text-xl lg:text-2xl font-bold pixel-shadow shadow-md mb-2 rounded">
-                  {bootcamp.title}
+              <span
+                aria-hidden
+                className="absolute inset-y-0 left-0 w-[3px] bg-gradient-to-b from-[#b9934a] via-[#94763a] to-transparent opacity-80"
+              />
+              <div className="relative flex flex-col gap-4 text-[#2a2420] sm:gap-5">
+                <div className="text-center">
+                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-[#b9934a]">
+                    Cohort
+                  </div>
+                  <h3 className="text-lg font-semibold sm:text-xl">{bootcamp.title}</h3>
                 </div>
-                <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-600">{bootcamp.year}</div>
-              </div>
-              
-              <div className="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl mx-auto">
-                <p className="text-sm sm:text-base md:text-lg font-medium text-gray-700 text-center leading-relaxed">
+
+                <p className="text-sm leading-relaxed text-[#3b2f25] sm:text-base">
                   {bootcamp.description}
                 </p>
+
+                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-[#b9934a]/80">
+                  <Compass size={14} strokeWidth={1.5} />
+                  {bootcamp.focus}
+                </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </motion.div>
     </section>
   );
-} 
+}
