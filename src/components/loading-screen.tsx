@@ -35,11 +35,11 @@ export function LoadingScreen({ onLoadingComplete }: { onLoadingComplete: () => 
   return (
     <div className="fixed inset-0 bg-gray-700 flex flex-col items-center justify-center z-50 font-mono">
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="w-full max-w-xl px-4">
-        <h1 className="text-[#f5d7b2] text-2xl mb-4">{message}</h1>
-        <div className="w-full h-8 border-2 border-dashed border-[#f5d7b2] p-1">
-          <div className="h-full bg-[#f5d7b2]" style={{ width: `${progress}%` }}></div>
+        <h1 className="text-[#FBE9BB] text-2xl mb-4">{message}</h1>
+        <div className="w-full h-8 border-2 border-dashed border-[#FBE9BB] p-1">
+          <div className="h-full bg-[#FBE9BB]" style={{ width: `${progress}%` }}></div>
         </div>
-        <p className="text-[#f5d7b2] mt-4">
+        <p className="text-[#FBE9BB] mt-4">
           {message === "Nearly There..." ? "Initializing Web3 Portfolio..." : "Loading Blockchain Data..."}
         </p>
       </motion.div>

@@ -40,7 +40,7 @@ export function Bootcamps() {
                 className="text-center"
             >
               <div className="text-center mb-4">
-                <div className="inline-block bg-gray-700 text-[#f5d7b2] px-3 sm:px-4 py-2 text-base sm:text-lg md:text-xl lg:text-2xl font-bold pixel-shadow shadow-md mb-2 rounded">
+                <div className="inline-block bg-gray-700 text-[#FBE9BB] px-3 sm:px-4 py-2 text-base sm:text-lg md:text-xl lg:text-2xl font-bold pixel-shadow shadow-md mb-2 rounded">
                   {bootcamp.title}
                 </div>
                 <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-600">{bootcamp.year}</div>

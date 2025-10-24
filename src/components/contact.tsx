@@ -29,7 +29,7 @@ export function Contact() {
     <section id="contact" className="py-4 sm:py-6 md:py-8">
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
         
-        <div className="border-2 border-dashed border-gray-700 p-4 sm:p-6 md:p-8 max-w-xs sm:max-w-sm md:max-w-lg mx-auto bg-gradient-to-br from-[#f5d7b2]/30 to-[#e8d5b7]/50 rounded-lg backdrop-blur-sm">
+        <div className="border-2 border-dashed border-gray-700 p-4 sm:p-6 md:p-8 max-w-xs sm:max-w-sm md:max-w-lg mx-auto bg-gradient-to-br from-[#FBE9BB]/30 to-[#e8d5b7]/50 rounded-lg backdrop-blur-sm">
           
           <motion.h3 
             className="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6 pixel-shadow text-center"

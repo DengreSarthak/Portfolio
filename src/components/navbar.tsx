@@ -77,7 +77,7 @@ export function Navbar() {
         <div className="fixed top-2 sm:top-4 left-2 sm:left-4 z-50 flex flex-col sm:flex-row items-start sm:items-center gap-2">
           {/* Menu Button */}
           <button
-            className="bg-gray-700/90 text-[#f5d7b2] p-1.5 sm:p-2 rounded-md hover:bg-gray-600 
+            className="bg-gray-700/90 text-[#FBE9BB] p-1.5 sm:p-2 rounded-md hover:bg-gray-600 
             transition-all duration-300 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)]
             hover:-translate-y-0.5 backdrop-blur-sm"
             onClick={toggleMenu}
@@ -95,7 +95,7 @@ export function Navbar() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-700/90 text-[#f5d7b2] p-1.5 sm:p-2 rounded-md hover:bg-gray-600 
+                className="bg-gray-700/90 text-[#FBE9BB] p-1.5 sm:p-2 rounded-md hover:bg-gray-600 
                 transition-all duration-300 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)]
                 hover:-translate-y-0.5 backdrop-blur-sm group"
                 aria-label={label}
@@ -118,7 +118,7 @@ export function Navbar() {
       {/* Side Navigation Panel */}
       <div 
         ref={menuRef}
-        className={`fixed top-0 left-0 h-full bg-[#f5d7b2] shadow-2xl z-40 
+        className={`fixed top-0 left-0 h-full bg-[#FBE9BB] shadow-2xl z-40 
         transform transition-transform duration-300 ease-in-out border-r border-gray-700/20
         ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} 
         w-[280px] sm:w-80`}
@@ -144,7 +144,7 @@ export function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="block py-2.5 sm:py-3 px-3 sm:px-4 text-gray-700 hover:bg-gray-700 hover:text-[#f5d7b2] 
+                    className="block py-2.5 sm:py-3 px-3 sm:px-4 text-gray-700 hover:bg-gray-700 hover:text-[#FBE9BB] 
                     rounded-md transition-all duration-300 font-medium text-sm sm:text-base"
                     onClick={closeMenu}
                   >
@@ -164,7 +164,7 @@ export function Navbar() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 bg-gray-700/90 text-[#f5d7b2] 
+                    className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 bg-gray-700/90 text-[#FBE9BB] 
                     rounded-md hover:bg-gray-600 transition-all duration-300 group"
                     aria-label={label}
                   >

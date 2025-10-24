@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
@@ -8,14 +9,12 @@ const experiences = [
     year: "2025 - Present",
     description:
       "Currently contributing to Raindrop under AOSSIE as part of Google Summer of Code. The project revolves around vault mechanics, yield calculations, and staking logic for ERC-20 tokens. Working on implementing sophisticated DeFi protocols that enable users to maximize their token yields through advanced staking mechanisms.",
-
   },
   {
     title: "StabilityNexus",
     year: "2024 - Present",
     description:
-      "Stability Nexus is an open-source organization focused on building impactful dApps that solve real-world problems and empower users. I've contributed to four major projects and continue to support others within the ecosystem. I worked closely with the co-founder of Stability Nexus, mentoring contributors and helping submit 11 projects to the ETC Grant DAO—securing over \$77,000 in funding.",
-
+      "Stability Nexus is an open-source organization focused on building impactful dApps that solve real-world problems and empower users. I've contributed to four major projects and continue to support others within the ecosystem. I worked closely with the co-founder of Stability Nexus, mentoring contributors and helping submit 11 projects to the ETC Grant DAO—securing over $77,000 in funding.",
   },
 ];
 
@@ -31,29 +30,43 @@ export function Experience() {
           <h2>Experience</h2>
         </div>
 
-        <div className="space-y-3 sm:space-y-4">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="p-3 sm:p-4 border-2 sm:border-4 border-dashed border-gray-500 rounded-lg hover:border-gray-800 transition-colors duration-300 bg-[#f5d7b2]/50 backdrop-blur-sm"
-            >
-              <div className="text-center">
-                <div className="inline-block bg-gray-700 text-[#f5d7b2] px-3 sm:px-4 py-2 text-lg sm:text-xl md:text-2xl font-bold pixel-shadow shadow-md mb-2 rounded">
-                  {exp.title}
+        <p className="mx-auto mb-6 max-w-2xl text-center text-sm sm:text-base md:text-lg text-[#4a3a2b] opacity-80">
+          Chapters of hands-on building, from active missions to long-term stewardship.
+        </p>
+
+        <div className="relative border-l border-[#d7b97c]/60 pl-7 sm:pl-9">
+          {experiences.map((exp, index) => {
+            return (
+              <motion.article
+                key={exp.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="relative pb-10 last:pb-0"
+              >
+                <span
+                  aria-hidden
+                  className="absolute -left-[13px] top-2 flex h-6 w-6 items-center justify-center rounded-full border border-[#b9934a]/80 bg-[#fdf3d2] text-[#2a2420]"
+                >
+                  <Briefcase size={14} strokeWidth={1.6} />
+                </span>
+                <div className="ml-1 rounded-md border border-[#d7b97c]/60 bg-[#fdf3d2] px-5 py-6 shadow-[0_10px_30px_-28px_rgba(47,39,32,0.65)]">
+                  <div className="flex flex-wrap items-center justify-between gap-4 text-[#2a2420]">
+                    <div>
+                      <h3 className="mt-2 text-lg font-semibold sm:text-xl">{exp.title}</h3>
+                    </div>
+                    <span className="inline-flex items-center rounded-sm border border-[#b9934a]/60 bg-[#f8e8bc] px-3 py-1 text-xs font-semibold uppercase tracking-[0.26em] text-[#2a2420]">
+                      {exp.year}
+                    </span>
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-[#3b2f25] sm:text-base">
+                    {exp.description}
+                  </p>
                 </div>
-                <div className="mb-2 text-sm sm:text-base md:text-lg lg:text-xl font-bold">{exp.year}</div>
-              </div>
-              <div className="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl mx-auto">
-                <p className="text-sm sm:text-base md:text-lg font-medium text-left leading-relaxed">
-                  {exp.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+              </motion.article>
+            );
+          })}
         </div>
       </motion.div>
     </section>

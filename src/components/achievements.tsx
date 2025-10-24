@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Sparkles } from "lucide-react";
 
 const achievements = [
   {
@@ -35,6 +36,11 @@ const achievements = [
   },
 ];
 
+const accentSwatches = [
+  "linear-gradient(90deg, rgba(185,147,74,0.28) 0%, rgba(185,147,74,0) 80%)",
+  "linear-gradient(90deg, rgba(47,39,32,0.24) 0%, rgba(47,39,32,0) 80%)",
+];
+
 export function Achievements() {
   return (
     <section id="achievements" className="py-4 sm:py-6 md:py-8">
@@ -47,29 +53,39 @@ export function Achievements() {
           <h2>Achievements</h2>
         </div>
 
-        <div className="space-y-4 sm:space-y-6">
+        <p className="mx-auto mb-6 max-w-2xl text-center text-sm sm:text-base md:text-lg text-[#4a3a2b] opacity-80">
+          Quiet victories, loud impact. A few milestones that shaped this builder’s journey.
+        </p>
+
+        <div className="space-y-4 sm:space-y-5 md:space-y-6">
           {achievements.map((achievement, index) => (
-            <motion.div
-              key={index}
+            <motion.article
+              key={achievement.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="p-3 sm:p-4 border-2 sm:border-4 border-dashed border-gray-500 rounded-lg hover:border-gray-800 transition-colors duration-300 bg-[#f5d7b2]/50 backdrop-blur-sm"
+              transition={{ delay: index * 0.06 }}
+              className="group relative overflow-hidden rounded-md border border-[#d7b97c]/60 bg-[#fdf3d2] px-5 py-6 shadow-[0_12px_30px_-25px_rgba(47,39,32,0.55)] transition-transform duration-200 hover:-translate-y-1.5"
             >
-              <div className="text-center mb-4">
-                <div className="inline-block bg-gray-700 text-[#f5d7b2] px-3 sm:px-4 py-2 text-base sm:text-lg md:text-xl lg:text-2xl font-bold pixel-shadow shadow-md mb-2 rounded">
-                  {achievement.title}
+              <span
+                aria-hidden
+                className="absolute inset-y-4 left-0 w-[3px] rounded-full bg-[#b9934a]/70"
+              />
+              <div className="relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-5">
+                  <div className="flex items-center gap-3 text-[#2a2420]">
+                    <div className="text-center">
+                      <h3 className="text-lg font-semibold text-[#2a2420] sm:text-xl text-center">
+                        {achievement.title}
+                      </h3>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-600">{achievement.year}</div>
               </div>
-              
-              <div className="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl mx-auto">
-                <p className="text-sm sm:text-base md:text-lg font-medium text-gray-700 text-center leading-relaxed">
-                  {achievement.description}
-                </p>
-              </div>
-            </motion.div>
+              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-[#3b2f25] sm:text-base">
+                {achievement.description}
+              </p>
+            </motion.article>
           ))}
         </div>
       </motion.div>

@@ -8,7 +8,7 @@
 
 :root {
   --foreground: #4d4d4d;
-  --background: #F6D4B1;
+  --background: #FFF1CE;
   --neon-green: #39ff14;
   --neon-pink: #ff00ff;
   --neon-blue: #00ffff;
@@ -38,14 +38,14 @@
   }
 
   .section-title h2 {
-    @apply bg-gray-700 px-2 sm:px-3 md:px-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#f5d7b2] pixel-shadow font-bold 
+    @apply bg-gray-700 px-2 sm:px-3 md:px-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#FBE9BB] pixel-shadow font-bold 
     [text-shadow:_1px_1px_0_#DAA520,_2px_2px_0_#CD853F,_3px_3px_0_rgba(0,0,0,0.3)]
     sm:[text-shadow:_2px_2px_0_#DAA520,_4px_4px_0_#CD853F,_6px_6px_0_rgba(0,0,0,0.3)]
     transform hover:translate-y-[-2px] transition-transform duration-200;
   }
 
   .project-title {
-    @apply inline-block bg-gray-600 text-[#f5d7b2] px-2 sm:px-3 md:px-4 py-1 sm:py-2 text-lg sm:text-xl md:text-2xl font-bold mb-1;
+    @apply inline-block bg-gray-600 text-[#FBE9BB] px-2 sm:px-3 md:px-4 py-1 sm:py-2 text-lg sm:text-xl md:text-2xl font-bold mb-1;
   }
   
   .tech-tag {

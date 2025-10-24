@@ -12,7 +12,7 @@ export function Hero() {
       >
         <div className="inline-block mb-4 sm:mb-6 shadow-md">
           <h1
-            className="bg-gray-700 px-2 sm:px-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#f5d7b2] pixel-shadow font-bold 
+            className="bg-gray-700 px-2 sm:px-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#FBE9BB] pixel-shadow font-bold 
             [text-shadow:_1px_1px_0_#DAA520,_2px_2px_0_#CD853F,_3px_3px_0_rgba(0,0,0,0.3)]
             sm:[text-shadow:_2px_2px_0_#DAA520,_4px_4px_0_#CD853F,_6px_6px_0_rgba(0,0,0,0.3)]
             transform hover:translate-y-[-2px] transition-transform duration-200"
