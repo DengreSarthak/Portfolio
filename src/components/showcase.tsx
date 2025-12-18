@@ -9,7 +9,8 @@ const projects = [
     title: "HackHub",
     category: "Frontend",
     year: "2025",
-    shortDescription: "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels.",
+    shortDescription: "HackHub's Next.js interface maps curated hackathons, conferences, and workshops with skill-level filters, live deadlines, and event-specific checklists so devs never miss a builder-friendly opportunity again.",
+    capsuleTagline: "Immersive explorer for every Web3 adventure drop.",
     githubLink: "https://github.com/StabilityNexus/HackHub-WebUI",
     demoLink: "https://hackhub.stability.nexus/",
   },
@@ -17,21 +18,24 @@ const projects = [
     title: "HackHub",
     category: "Solidity",
     year: "2025",
-    shortDescription: "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels.",
+    shortDescription: "Composable Solidity modules handle trustless registrations, prize vault custody, sponsor payouts, and verifiable attendance proofs, letting organizers run entire events without spreadsheets.",
+    capsuleTagline: "Permissionless rails for autonomous tech festivals.",
     githubLink: "https://github.com/StabilityNexus/HackHub-Solidity",
   },
   {
     title: "OrbOracle",
     category: "Solidity",
     year: "2025",
-    shortDescription: "The comprehensive Web3 event discovery and management platform that revolutionizes how developers connect with opportunities. Participants can easily discover local hackathons, conferences, and tech meetups tailored to their interests and skill levels.",
+    shortDescription: "OrbOracle lets anyone spin up decentralized oracle networks, configure feeds, and onboard data stewards without relying on a centralized middleman, so builders can price assets the moment they launch.",
+    capsuleTagline: "Oracle factory for unstoppable data markets.",
     githubLink: "https://github.com/StabilityNexus/OrbOracle-Solidity",
   },
   {
     title: "HodlCoin",
     category: "Frontend",
     year: "2024",
-    shortDescription: "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself.",
+    shortDescription: "HodlCoin is a staking protocol that encourages staking assets for long periods of time. When hodling, users deposit coins of a given asset in a vault and receive a proportional amount of corresponding hodlCoins.",
+    capsuleTagline: "Vault loyalty lab for patient capital.",
     githubLink: "https://github.com/StabilityNexus/hodlCoin-Solidity-WebUI",
     demoLink: "https://evm.hodlcoin.co.in/", 
   },
@@ -39,7 +43,8 @@ const projects = [
     title: "OrbOracle",
     category: "Rust",
     year: "2025",
-    shortDescription: "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself.",
+    shortDescription: "The Solana-native implementation streams oracle updates at sub-second latency, coordinating verifiers, stake routing, and settlement hooks for high-throughput DeFi apps.",
+    capsuleTagline: "Blazing-fast oracle lane for Solana apps.",
     githubLink: "https://github.com/StabilityNexus/OrbOracle-Solana",
     demoLink: "https://tnt.stability.nexus/", 
   },
@@ -47,7 +52,8 @@ const projects = [
     title: "Gluon",
     category: "Rust",
     year: "2025",
-    shortDescription: "An innovative collaboration platform that transforms how teams track and reward contributions through Contribution Accounting Tokens (CATs). Project owners can create transparent systems to monitor individual contributions, ensuring every team member's effort is properly recognized and rewarded.",
+    shortDescription: "Gluon is a permissionless platform where anyone can create decentralized stablecoins using a dual-token mechanism. Manage their own stability with customizable parameters.",
+    capsuleTagline: "Dual-token stability foundry for treasury engineers.",
     githubLink: "https://github.com/StabilityNexus/Gluon-Solana", 
     demoLink: "https://clowder.stability.nexus/",
   },
@@ -55,7 +61,8 @@ const projects = [
     title: "IncoRichi",
     category: "Undefined",
     year: "2025",
-    shortDescription: "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself.",
+    shortDescription: "IncoRichi is a TEE-powered playground where anyone can privately compare wealth or net-worth snapshots without leaking the underlying numbers.",
+    capsuleTagline: "Confidential giving capsule for impact squads.",
     githubLink: "https://github.com/DengreSarthak/IncoRichi",
     demoLink: "https://inco-richi.vercel.app/", 
   },
@@ -63,7 +70,8 @@ const projects = [
     title: "OraclePoster",
     category: "Undefined",
     year: "2025",
-    shortDescription: "A comprehensive decentralized platform specifically designed to reward long-term cryptocurrency holders. The unique incentive mechanism creates a win-win-win scenario that benefits individual users, vault creators, and the ecosystem itself.",
+    shortDescription: "OraclePoster ships as a simple Docker script that anyone can run to push asset prices on-chain, making it the go-to helper service for OrbOracle deployments.",
+    capsuleTagline: "Autonomous courier for mission-critical price feeds.",
     githubLink: "https://github.com/DjedAlliance/Oracle-Backend",
   },
 ];
@@ -128,7 +136,7 @@ export function Showcase() {
         </div>
 
         <p className="mb-6 sm:mb-8 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl mx-auto opacity-80">
-          A curated selection of my Web3 adventures. Each project solves real problems while pushing blockchain boundaries!
+          These capsules highlight what I consider my sharpest work in each stack, making it easy to gauge how I think about real-world problems end to end.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8">
@@ -169,9 +177,10 @@ export function Showcase() {
           {filteredProjects.map((project, index) => {
             const isEven = index % 2 === 0;
             const capsuleTagline =
-              project.category === "Undefined"
+              project.capsuleTagline ??
+              (project.category === "Undefined"
                 ? "Signature multi-stack drop crafted for curious explorers."
-                : `Signature ${project.category.toLowerCase()} drop built for curious explorers.`;
+                : `Signature ${project.category.toLowerCase()} drop built for curious explorers.`);
 
             return (
               <motion.div

@@ -12,7 +12,7 @@ const experiences = [
   },
   {
     title: "StabilityNexus",
-    year: "2024 - Present",
+    year: "Nov 2024 - Present",
     description:
       "Stability Nexus is an open-source organization focused on building impactful dApps that solve real-world problems and empower users. I've contributed to four major projects and continue to support others within the ecosystem. I worked closely with the co-founder of Stability Nexus, mentoring contributors and helping submit 11 projects to the ETC Grant DAO—securing over $77,000 in funding.",
   },

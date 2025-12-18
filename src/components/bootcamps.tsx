@@ -9,14 +9,12 @@ const bootcamps = [
     year: "Cohort 2025",
     description:
       "Selected from 200+ applicants to explore the EigenLayer restaking universe, designing resilient AVS patterns and championing shared security primitives.",
-    focus: "Restaking primitives & AVS ops",
   },
   {
     title: "Uniswap Hook Incubator",
     year: "Cohort 2025",
     description:
       "Joined the Uniswap Hook Incubator to prototype custom liquidity flows, programmable vault logic, and next-gen trading experiences for on-chain markets.",
-    focus: "Programmable liquidity design",
   },
 ];
 
@@ -62,11 +60,6 @@ export function Bootcamps() {
                 <p className="text-sm leading-relaxed text-[#3b2f25] sm:text-base">
                   {bootcamp.description}
                 </p>
-
-                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-[#b9934a]/80">
-                  <Compass size={14} strokeWidth={1.5} />
-                  {bootcamp.focus}
-                </div>
               </div>
             </motion.article>
           ))}
