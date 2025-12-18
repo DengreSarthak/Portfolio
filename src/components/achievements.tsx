@@ -5,6 +5,12 @@ import { Sparkles } from "lucide-react";
 
 const achievements = [
   {
+    title: "EthGlobal Buenos Aires",
+    year: "2025",
+    description:
+      "P.A.T built on top of Uniswap v4 and its hook system, which we use as the execution layer for swaps. Won the Uniswap, Oasis, and Pyth track prize!",
+  },
+  {
     title: "Encode's University Hackathon",
     year: "2025",
     description:

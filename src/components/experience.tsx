@@ -6,7 +6,7 @@ import { Briefcase } from "lucide-react";
 const experiences = [
   {
     title: "Google Summer of Code",
-    year: "2025 - Present",
+    year: "May 2025 - Nov 2025",
     description:
       "Currently contributing to Raindrop under AOSSIE as part of Google Summer of Code. The project revolves around vault mechanics, yield calculations, and staking logic for ERC-20 tokens. Working on implementing sophisticated DeFi protocols that enable users to maximize their token yields through advanced staking mechanisms.",
   },
