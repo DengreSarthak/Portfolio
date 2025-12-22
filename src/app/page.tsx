@@ -10,6 +10,8 @@ import { Hero } from "@/components/hero"
 import { Navbar } from "@/components/navbar"
 import { LoadingScreen } from "@/components/loading-screen"
 import { Divider } from "@/components/divider"
+ import { Whitepapers } from "@/components/whitepapers"
+
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -53,6 +55,8 @@ export default function Home() {
           <Experience />
           <Divider />
           <Achievements />
+          <Divider />
+          <Whitepapers />
           <Divider />
           <Showcase />
           <Divider />

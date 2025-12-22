@@ -21,6 +21,7 @@ const projects = [
     shortDescription: "Composable Solidity modules handle trustless registrations, prize vault custody, sponsor payouts, and verifiable attendance proofs, letting organizers run entire events without spreadsheets.",
     capsuleTagline: "Permissionless rails for autonomous tech festivals.",
     githubLink: "https://github.com/StabilityNexus/HackHub-Solidity",
+    demoLink: "https://hackhub.stability.nexus/",
   },
   {
     title: "OrbOracle",
@@ -29,6 +30,7 @@ const projects = [
     shortDescription: "OrbOracle lets anyone spin up decentralized oracle networks, configure feeds, and onboard data stewards without relying on a centralized middleman, so builders can price assets the moment they launch.",
     capsuleTagline: "Oracle factory for unstoppable data markets.",
     githubLink: "https://github.com/StabilityNexus/OrbOracle-Solidity",
+    demoLink: "https://orb-oracle.stability.nexus/",
   },
   {
     title: "HodlCoin",
@@ -67,12 +69,12 @@ const projects = [
     demoLink: "https://inco-richi.vercel.app/", 
   },
   {
-    title: "OraclePoster",
+    title: "P.A.T",
     category: "Undefined",
     year: "2025",
-    shortDescription: "OraclePoster ships as a simple Docker script that anyone can run to push asset prices on-chain, making it the go-to helper service for OrbOracle deployments.",
-    capsuleTagline: "Autonomous courier for mission-critical price feeds.",
-    githubLink: "https://github.com/DjedAlliance/Oracle-Backend",
+    shortDescription: "is built on top of Uniswap v4 and its hook system, which we use as the execution layer for swaps. We override Uniswap’s default curve-based pricing with custom curve logic and introduce an asynchronous, batch-based swap model implemented via hooks.",
+    capsuleTagline: "Proprietary Automated Market Maker launchpad built on top of Uniswap V4 using TEEs.",
+    githubLink: "https://github.com/DengreSarthak/p.a.t",
   },
 ];
 
