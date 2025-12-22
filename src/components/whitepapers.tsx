@@ -89,7 +89,7 @@ export function Whitepapers() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Live Build
+                    Implementation
                   </Link>
                 </div>
               </div>
