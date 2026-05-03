@@ -5,6 +5,18 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
+    title: "GSoC'26 Mentor",
+    year: "Apr 2026 - Present",
+    description:
+      "Mentoring and guiding contributors on the OrbOracle, StablePay and Gluon project under AOSSIE during Google Summer of Code. Providing technical direction and support.",
+  },
+  {
+    title: "AOSSIE Project Maintainer",
+    year: "Dec 2025 - Present",
+    description:
+      "Maintaining various projects under AOSSIE, overseeing code quality and project direction. Managing contributions, reviewing pull requests, and ensuring alignment with the project's vision for advanced DeFi solutions. Coordinating development efforts.",
+  },
+  {
     title: "Google Summer of Code",
     year: "May 2025 - Nov 2025",
     description:
