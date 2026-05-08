@@ -19,7 +19,7 @@ const whitepapers = [
     summary:
       "Gluon Z is to split (as in nuclear fission) an existing volatile asset into its stable and unstable components. These components can be merged back (as in nuclear fusion) into the original asset or transmuted into each other (as in nuclear beta decays)",
     whitepaper: "https://eprint.iacr.org/2025/1372",
-    Implementation: "https://evm.gluon.stability.nexus/",
+    Implementation: "https://stabilitynexus.github.io/Gluon-EVM-WebUI/",
   },
   {
     title: "Raindrop",

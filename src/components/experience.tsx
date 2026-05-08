@@ -17,7 +17,7 @@ const experiences = [
       "Maintaining various projects under AOSSIE, overseeing code quality and project direction. Managing contributions, reviewing pull requests, and ensuring alignment with the project's vision for advanced DeFi solutions. Coordinating development efforts.",
   },
   {
-    title: "Google Summer of Code",
+    title: "Google Summer of Code'25",
     year: "May 2025 - Nov 2025",
     description:
       "Currently contributing to Raindrop under AOSSIE as part of Google Summer of Code. The project revolves around vault mechanics, yield calculations, and staking logic for ERC-20 tokens. Working on implementing sophisticated DeFi protocols that enable users to maximize their token yields through advanced staking mechanisms.",
