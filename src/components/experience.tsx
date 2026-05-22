@@ -11,6 +11,12 @@ const experiences = [
       "Mentoring and guiding contributors on the OrbOracle, StablePay and Gluon project under AOSSIE during Google Summer of Code. Providing technical direction and support.",
   },
   {
+    title: "StabilityNexus",
+    year: "Sept 2024 - Present",
+    description:
+      "Stability Nexus is an open-source organization focused on building impactful dApps that solve real-world problems and empower users. I've contributed to four major projects and continue to support others within the ecosystem. I worked closely with the co-founder of Stability Nexus, mentoring contributors and helping submit 11 projects to the ETC Grant DAO—securing over $77,000 in funding.",
+  },
+  {
     title: "AOSSIE Project Maintainer",
     year: "Dec 2025 - Present",
     description:
@@ -21,12 +27,6 @@ const experiences = [
     year: "May 2025 - Nov 2025",
     description:
       "Currently contributing to Raindrop under AOSSIE as part of Google Summer of Code. The project revolves around vault mechanics, yield calculations, and staking logic for ERC-20 tokens. Working on implementing sophisticated DeFi protocols that enable users to maximize their token yields through advanced staking mechanisms.",
-  },
-  {
-    title: "StabilityNexus",
-    year: "Nov 2024 - Present",
-    description:
-      "Stability Nexus is an open-source organization focused on building impactful dApps that solve real-world problems and empower users. I've contributed to four major projects and continue to support others within the ecosystem. I worked closely with the co-founder of Stability Nexus, mentoring contributors and helping submit 11 projects to the ETC Grant DAO—securing over $77,000 in funding.",
   },
 ];
 
