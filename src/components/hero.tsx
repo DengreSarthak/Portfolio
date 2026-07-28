@@ -23,13 +23,13 @@ export function Hero() {
 
         <div className="space-y-4 sm:space-y-6 font-medium text-base sm:text-lg md:text-xl lg:text-2xl max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl mx-auto">
           <p className="leading-relaxed">
-            I'm <span className="font-bold text-gray-800">Sarthak</span> — a builder obsessed with 
+            I&apos;m <span className="font-bold text-gray-800">Sarthak</span> — a builder obsessed with 
             smart contracts, AI agents, and APIs. Currently studying about Kubernetes and TEE turning dreams into reality!
           </p>
 
           <p className="leading-relaxed">
-            When not coding decentralized magic, I'm probably reading about economics, 
-            debating politics, or hunting for the perfect meme. Life's too short for boring tech!
+            When not coding decentralized magic, I&apos;m probably reading about economics, 
+            debating politics, or hunting for the perfect meme. Life&apos;s too short for boring tech!
           </p>
         </div>
       </motion.div>

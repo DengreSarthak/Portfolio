@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
 
 const achievements = [
   {
@@ -40,11 +39,6 @@ const achievements = [
     description:
       "Aptos track champion! Built the ultimate Web3 event discovery platform connecting builders worldwide.",
   },
-];
-
-const accentSwatches = [
-  "linear-gradient(90deg, rgba(185,147,74,0.28) 0%, rgba(185,147,74,0) 80%)",
-  "linear-gradient(90deg, rgba(47,39,32,0.24) 0%, rgba(47,39,32,0) 80%)",
 ];
 
 export function Achievements() {

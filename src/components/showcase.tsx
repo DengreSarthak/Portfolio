@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useMemo, useState } from "react"
-import { Github, ExternalLink, Sparkles } from "lucide-react"
+import { Sparkles } from "lucide-react"
 
 const projects = [
   {
